@@ -9,7 +9,7 @@ public class VolumeSliderManager : MonoBehaviour
     {
         if (volumeSlider != null)
         {
-            volumeSlider.value = PlayerPrefs.GetFloat("Volume", 1f);
+            volumeSlider.value = PlayerPrefs.GetFloat("Volume" , 1f);
         }
     }
 }

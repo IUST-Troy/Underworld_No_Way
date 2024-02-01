@@ -581,6 +581,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1292829172}
     m_Modifications:
+    - target: {fileID: 3069411291477859893, guid: c62b5627126d11b49aa2ccb0e82addce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1292829173}
+    - target: {fileID: 3069411291477859893, guid: c62b5627126d11b49aa2ccb0e82addce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnUpgradeClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069411291477859893, guid: c62b5627126d11b49aa2ccb0e82addce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BackToMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5277838614401575369, guid: c62b5627126d11b49aa2ccb0e82addce, type: 3}
       propertyPath: m_text
       value: Upgrade
@@ -1259,7 +1271,7 @@ GameObject:
   - component: {fileID: 1589585711}
   - component: {fileID: 1589585710}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class GoToLevelUnlocker : MonoBehaviour
 {
     public void OnLevelClick(){
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }

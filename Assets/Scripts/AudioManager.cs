@@ -37,6 +37,7 @@ public class AudioManager : MonoBehaviour {
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.loop = true;
         audioSource.clip = Resources.Load<AudioClip>("AudioTrack");
+        audioSource.volume = PlayerPrefs.GetFloat("Volume");
         audioSource.Play();
     }
     public void SetVolume(float volume){

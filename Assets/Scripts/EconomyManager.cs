@@ -15,6 +15,13 @@ public class EconomyManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Coins",0);
         }
+        if (PlayerPrefs.HasKey("Attack") == false)
+        {
+            PlayerPrefs.SetInt("Attack" , 1);
+            PlayerPrefs.SetInt("HP" , 1);
+            PlayerPrefs.SetFloat("AttackMultiplier" , 1);
+            PlayerPrefs.SetFloat("HPMultiplier" , 1);
+        }
         currentCoins = PlayerPrefs.GetInt("Coins");
         UpdateCoins();
     }

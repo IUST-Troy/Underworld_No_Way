@@ -12,6 +12,9 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = (int)(maxHealth * PlayerPrefs.GetFloat("HPMultiplier"));
+        Debug.Log($"Attack: {PlayerPrefs.GetFloat("AMP")}");
+        Debug.Log($"Health{maxHealth}");
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
     }

@@ -20,4 +20,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TempLevelUnlcoker.unity
     guid: 11d8f04e94990c64e968bdac3f526239
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: ebde811a5057bad4a8f03c35dff77091
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 6f2c86b35c256d14c988a7db5c09c7cb
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 40f27dfeae2b5094989056a43a0daa6b
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: b3ade595e9532d645bf637e0ad4f32fb
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 1638b5159501a6145a9d45001a8ed775
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 609a2475f32becb409450e2da330a43f
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: 74b97a81b9279a3459b29e29370f1d2a
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 2ab0d6f2f277a6949b6da68796d391b3
+  - enabled: 1
+    path: Assets/Scenes/Level9.unity
+    guid: b6bd7cdd259327343913f21849608b21
+  - enabled: 1
+    path: Assets/Scenes/Level10.unity
+    guid: d058a6140b1f9d84ebcc8d428be1b25e
+  - enabled: 1
+    path: Assets/Scenes/Defeat.unity
+    guid: 56be7ee3b92ff4a4094f571b26131d53
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 77e65818463b90147a43c2b5db2dc784
   m_configObjects: {}

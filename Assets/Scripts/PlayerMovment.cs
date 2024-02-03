@@ -37,7 +37,7 @@ public class PlayerMovment : MonoBehaviour
         // Move the character
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
-        Debug.Log(controller.m_Grounded);
+        //Debug.Log(controller.m_Grounded);
         if (controller.m_Grounded)
         {
             animator.SetBool("Grounded", controller.m_Grounded);

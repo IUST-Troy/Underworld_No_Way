@@ -55,7 +55,10 @@ public class PlayerCombat : MonoBehaviour
             // Damage them
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                if (enemy.GetComponent<Health>()  != null)
+                    enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                else
+                    enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             }
             await Task.Delay(200);
             canAttack = true;

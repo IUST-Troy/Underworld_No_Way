@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -17,7 +15,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(int damage)
@@ -26,7 +24,7 @@ public class Health : MonoBehaviour
         animator.SetTrigger("Hurt");
 
         // play hurt animation
-        if (currentHealth <= 0) 
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -39,7 +37,8 @@ public class Health : MonoBehaviour
 
         // Disable the enemy
         GetComponent<BoxCollider2D>().enabled = false;
-        GetComponent<Rigidbody2D>().gravityScale = 0;
+        if (GetComponent<Rigidbody2D>() != null)
+            GetComponent<Rigidbody2D>().gravityScale = 0;
         this.enabled = false;
     }
 }

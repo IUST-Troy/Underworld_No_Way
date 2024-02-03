@@ -11,16 +11,20 @@ public class EconomyManager : MonoBehaviour
     private int currentCoins;
     void Start()
     {
+        Debug.Log("Here");
         if (PlayerPrefs.HasKey("Coins") == false)
         {
             PlayerPrefs.SetInt("Coins",0);
         }
         if (PlayerPrefs.HasKey("Attack") == false)
         {
+            Debug.Log("Hereeeee");
             PlayerPrefs.SetInt("Attack" , 1);
             PlayerPrefs.SetInt("HP" , 1);
-            PlayerPrefs.SetFloat("AttackMultiplier" , 1);
-            PlayerPrefs.SetFloat("HPMultiplier" , 1);
+            PlayerPrefs.SetFloat("AMP" , 1f);
+            Debug.Log(PlayerPrefs.GetFloat("AMP"));
+            PlayerPrefs.SetFloat("HPMultiplier" , 1f);
+            PlayerPrefs.Save();
         }
         currentCoins = PlayerPrefs.GetInt("Coins");
         UpdateCoins();

@@ -14,13 +14,22 @@ public class PlayerCombat : MonoBehaviour
     public float heavyAttackRange = 1.0f;
     public float ultimateRange = 20f;
     public LayerMask enemyLayers;
-    public int attackDamage = 20;
-    public int heavyAttackDamage = 40;
-    public int ultimateDamage = 400;
+    private int attackDamage;
+    private int heavyAttackDamage;
+    private int ultimateDamage;
+    public int baseDamage= 20;
     bool canAttack = true;
     bool canHeavyAttack = true;
     bool canUseUltimate = true;
 
+    void Start(){
+        var multiplier = PlayerPrefs.GetFloat("AMP");
+        Debug.Log(multiplier);
+        attackDamage = (int) (baseDamage*multiplier);
+        Debug.Log($"AttackDMG: {attackDamage}");
+        heavyAttackDamage = 2 * attackDamage;
+        ultimateDamage = 10 * attackDamage;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -55,8 +64,9 @@ public class PlayerCombat : MonoBehaviour
             // Damage them
             foreach (Collider2D enemy in hitEnemies)
             {
-                if (enemy.GetComponent<Health>()  != null)
-                    enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                if (enemy.GetComponent<EnemyHealth>()  != null){
+                    Debug.Log(attackDamage);
+                    enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);}
                 else
                     enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             }
@@ -81,7 +91,7 @@ public class PlayerCombat : MonoBehaviour
             // Damage them
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.GetComponent<Health>().TakeDamage(heavyAttackDamage);
+                enemy.GetComponent<EnemyHealth>().TakeDamage(heavyAttackDamage);
             }
             await Task.Delay(500);
             canHeavyAttack = true;
@@ -104,7 +114,7 @@ public class PlayerCombat : MonoBehaviour
             // Damage them
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.GetComponent<Health>().TakeDamage(ultimateDamage);
+                enemy.GetComponent<EnemyHealth>().TakeDamage(ultimateDamage);
             }
             await Task.Delay(100);
         }

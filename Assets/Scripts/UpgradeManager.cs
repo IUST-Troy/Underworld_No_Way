@@ -26,7 +26,7 @@ public class UpdateManager : MonoBehaviour
     void Start()
     {
         currentMoney = PlayerPrefs.GetInt("Coins");
-        currentAttack = PlayerPrefs.GetFloat("AttackMultiplier");
+        currentAttack = PlayerPrefs.GetFloat("AMP");
         currentHP = PlayerPrefs.GetFloat("HPMultiplier");
         nextAttack = currentAttack + (float)0.1;
         nextHP = currentHP + (float)0.1;
@@ -43,7 +43,7 @@ public class UpdateManager : MonoBehaviour
         PlayerPrefs.SetInt("Attack",atk);
         AttackPrice = 100 * atk;
         currentAttack += (float)0.1;
-        PlayerPrefs.SetFloat("AttackMultiplier",currentAttack);
+        PlayerPrefs.SetFloat("AMP",currentAttack);
         nextAttack += (float)0.1;
         UpdateUI();
     }
